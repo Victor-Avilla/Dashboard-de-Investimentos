@@ -5,18 +5,18 @@ import Header from './Header'
 import Dashboard from './Dashboard'
 import Cards from './Cards'
 
-import { TrendingUp, TrendingDown,PiggyBank, ChartNoAxesColumn, Percent, Wallet } from 'lucide-react'
+import { TrendingUp, TrendingDown, PiggyBank, ChartNoAxesColumn, Percent, Wallet } from 'lucide-react'
 
 function App() {
     return (
-        <div className='bg-slate-950 h-screen w-screen '>
+        <div className='bg-slate-950 h-full w-full md:h-screen lg:h-screen xl:h-screen'>
 
             <Header />
 
             <div className='
             grid grid-cols-2 gap-3.5 p-5 
             md:grid-cols-3  
-            lg:grid-cols-6 lg:mx-30
+            lg:grid-cols-6 lg:mx-10
             xl:mx-40 xl'>
 
                 <Cards Icon={PiggyBank} iconColor={'bg-sky-800'} bgIconColor={'text-sky-200'} title={'Patrimonio Total'} data={'R$ 100.000,00'} value={'+5.3%'} />
@@ -28,7 +28,10 @@ function App() {
 
 
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+            <div className='
+            grid grid-cols-1 gap-5 pb-5
+            md:grid-cols-2 
+            lg:grid-cols-3'>
 
                 <Dashboard />
                 <Dashboard />

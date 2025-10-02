@@ -1,8 +1,19 @@
-function Dashboard(){
-    return(
-        <section className=' max-w-full m-5 md:mx-10 xl:mx-5'>
+import ChartsConfig from "./Charts"
 
-        <div className="max-w-full h-96 bg-slate-900 rounded-md border border-slate-800">1</div>
+function Dashboard() {
+    return (
+        <section className=' max-w-full px-5 lg:px-5'>
+
+            <div className=" bg-slate-900 rounded-md border border-slate-800">
+
+            <ChartsConfig
+                title="Distribuição dos Investimentos"
+                type="donut"
+                series={[40, 30, 20, 10]} // valores
+                categories={["Ações", "FIIs", "Cripto", "Renda Fixa"]} // labels
+            />
+
+            </div>
 
 
         </section>
