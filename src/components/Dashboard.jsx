@@ -6,12 +6,6 @@ function Dashboard() {
 
             <div className=" bg-slate-900 rounded-md border border-slate-800">
 
-            <ChartsConfig
-                title="Distribuição dos Investimentos"
-                type="donut"
-                series={[40, 30, 20, 10]} // valores
-                categories={["Ações", "FIIs", "Cripto", "Renda Fixa"]} // labels
-            />
 
             </div>
 
