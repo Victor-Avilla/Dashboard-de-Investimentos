@@ -4,10 +4,11 @@ import '../styles/index.css'
 import Header from './Header'
 import Dashboard from './Dashboard'
 import Cards from './Cards'
-import Donut from './graficos/Donut'
+
 
 import { TrendingUp, TrendingDown, PiggyBank, ChartNoAxesColumn, Percent, Wallet } from 'lucide-react'
-import { Doughnut } from 'react-chartjs-2'
+import LineGraph from './graficos/Line'
+
 
 function App() {
     return (
@@ -36,10 +37,9 @@ function App() {
             lg:grid-cols-3'>
 
 
-                <Doughnut/>
-                <Donut/>
-                <Dashboard />
-                <Dashboard />
+             
+                <Dashboard type='donut'/>
+                <Dashboard type='line'/>
                 <Dashboard />
 
             </div>

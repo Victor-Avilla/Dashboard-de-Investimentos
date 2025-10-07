@@ -1,13 +1,22 @@
 import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
-export default function donut() {
+ChartJS.register(
+    ArcElement,
+    Tooltip,
+    Legend)
+export default function DonutGraph() {
 
-    const config ={
-        type:'Doughnut',
+    const options ={
+
+        responsive:'true'
+
     }
 
-    const donutData = {
-        labels: ['Ações', 'FIIs', 'Renda Fixa', 'Cripto'],
+    const data = {
+        labels: [
+            'Ações', 'FIIs', 'Renda Fixa', 'Cripto'
+        ],
         datasets: [{
             label: 'Ativos',
             data: [30, 10, 50, 10],
@@ -18,5 +27,6 @@ export default function donut() {
                 '#3f567e']
         }]
     }
+    return <Doughnut options={options} data={data} />
 
 }
