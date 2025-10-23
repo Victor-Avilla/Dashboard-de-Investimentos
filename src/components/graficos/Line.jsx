@@ -24,8 +24,12 @@ export default function LineGraph() {
                 labels: {
                     color: '#64748b'
                 }
+
             }
         },
+        layout: {
+            padding: 10,
+        }
     }
 
 

@@ -1,5 +1,5 @@
 import { Doughnut } from "react-chartjs-2";
-import { Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(
     ArcElement,
@@ -9,14 +9,17 @@ export default function DonutGraph() {
 
     const options = {
         responsive: 'true',
+        maintainAspectRatio: 'true',
         plugins: {
             legend: {
+                position:'bottom',
                 labels: {
                     color: '#64748b'
-                }
-            }
+                }}
+        },
+        layout: {
+            padding: 10,
         }
-
     }
 
     const data = {
@@ -25,9 +28,8 @@ export default function DonutGraph() {
         ],
         datasets: [{
             label: 'Ativos',
-            borderColor: 'transparent',
             data: [30, 20, 20, 30],
-             backgroundColor: [
+            backgroundColor: [
                 'rgba(255, 99, 133, 0.350)',
                 'rgba(255, 159, 64, 0.350)',
                 'rgba(255, 205, 86, 0.350)',

@@ -11,13 +11,13 @@ function Dashboard({type}) {
     }
 
     return (
-        <section className=' max-w-full px-5 lg:px-5' >
+        <section className='flex items-center justify-center bg-slate-900 rounded-md border border-slate-800 max-w-full min-w-2xs max-h-72 min-h-80 px-5 lg:px-5' >
 
-            <div className=" bg-slate-900 rounded-md border border-slate-800">
+          
 
                {charts[type]}
 
-            </div>
+            
 
 
         </section >
