@@ -1,11 +1,13 @@
 import LineGraph from "./graficos/Line"
 import DonutGraph from "./graficos/Donut.jsx"
+import BarGraph from "./graficos/Bar.jsx"
 
 function Dashboard({type}) {
 
     const charts={
         donut: <DonutGraph/>,
-        line: <LineGraph/>
+        line: <LineGraph/>,
+        bar: <BarGraph/>
     }
 
     return (

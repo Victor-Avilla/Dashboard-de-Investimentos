@@ -1,5 +1,5 @@
 import { Line } from "react-chartjs-2";
-import {Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend} from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
 ChartJS.register(
     CategoryScale,
@@ -13,27 +13,30 @@ ChartJS.register(
 
 export default function LineGraph() {
 
-    const options ={
+    const options = {
         responsive: true,
+        legend: {
+            position: 'top',
+        },
+        pointBackgroundColor: '#c45b1a',
+        plugins: {
             legend: {
-                position: 'top',
-            },
-            title: {
-                display: true,
-                text: 'Histórico de Rendimento',
-            },
-            pointBackgroundColor: '#c45b1a',
-        }
-    
+                labels: {
+                    color: '#64748b'
+                }
+            }
+        },
+    }
+
 
     const data = {
-        
-        labels:[
+
+        labels: [
             "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"
         ],
-        datasets:[{
-            label: 'Patrimonio',
-            data:[0,200,5000,3000,8000,7600,4000,10000,40000,65500,80000,100000],
+        datasets: [{
+            label: 'Patrimonio Total',
+            data: [0, 200, 5000, 3000, 8000, 7600, 4000, 10000, 40000, 65500, 80000, 100000],
             borderColor: '#776015',
         }]
     }

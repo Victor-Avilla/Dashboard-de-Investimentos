@@ -40,7 +40,7 @@ function App() {
              
                 <Dashboard type='donut'/>
                 <Dashboard type='line'/>
-                <Dashboard />
+                <Dashboard type='bar'/>
 
             </div>
 
