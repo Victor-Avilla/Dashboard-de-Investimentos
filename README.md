@@ -1,12 +1,36 @@
-# React + Vite
+# Dashboard de Investimentos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto pessoal em React + Tailwind CSS que implementa um painel (dashboard) para visualização e acompanhamento de investimentos. Desenvolvido a partir de uma necessidade real para estudar e consolidar conhecimentos em React, Tailwind e integração de gráficos com Chart.js.
 
-Currently, two official plugins are available:
+> Observação: design, layout e código foram idealizados e implementados por mim.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Status
+- Em desenvolvimento, com dados mockados.
+- Primeira etapa: aba principal com gráficos e dados consolidados do portfólio do usuário.
+- Próximas abas planejadas: Transações e Análise do Portfólio com auxílio de IA.
+  
+- Layout atual(sujeito a ajustes e mudanças):
+<img width="2330" height="1223" alt="image" src="https://github.com/user-attachments/assets/947459c1-927e-42a4-aa37-52c36dcd2d7e" />
+<img width="335" height="700" alt="image" src="https://github.com/user-attachments/assets/2b68e2cd-f7aa-419f-9c00-f8656a6e441c" />
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tecnologias
+- React
+- JavaScript
+- Tailwind CSS
+- Chart.js
+- Vite
+
+## Funcionalidades já implementadas
+- Página principal (Dashboard) com:
+  - Gráficos de linha e pizza para visualização de desempenho e composição do portfólio.
+  - Cards de resumo com valores investidos, rentabilidade e alocação por classe de ativo.
+- Componentes reutilizáveis para gráficos e cards.
+- Layout responsivo com Tailwind (ajustes finos podem necessários).
+
+## Roadmap
+- Aba de Transações: cadastro, edição e listagem de entradas/saídas.
+- Aba de Análise do Portfólio com IA: insights automáticos, sugestões e projeções.
+- Persistência de dados (localStorage / backend simples).
+- Melhorias de UX e acessibilidade.
+
