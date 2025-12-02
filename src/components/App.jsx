@@ -1,22 +1,16 @@
-import { useState } from 'react'
 
 import '../styles/index.css'
-import Header from './Header'
-import Dashboard from './Dashboard'
-import Cards from './Cards'
 
-
-import { TrendingUp, TrendingDown, PiggyBank, ChartNoAxesColumn, Percent, Wallet } from 'lucide-react'
-import LineGraph from './graficos/Line'
+import DefaultLayout from '../layouts/DefaultLayout'
 
 
 function App() {
     return (
-        <div className='bg-slate-950 h-full w-full md:h-screen lg:h-screen xl:h-screen'>
+        <div >
 
-            <Header />
+            <DefaultLayout/>
 
-            <div className='
+            {/* <div className='
             grid grid-cols-2 gap-3.5 p-5 
             md:grid-cols-3  
             lg:grid-cols-6 lg:mx-10
@@ -32,17 +26,15 @@ function App() {
 
             </div>
             <div className='
-            grid grid-cols-1 gap-5 pb-5
+            grid grid-cols-1 gap-5 pb-5 mx-5
             md:grid-cols-2 
-            lg:grid-cols-3'>
+            lg:grid-cols-3 '>
 
+                <Dashboard type='donut' />
+                <Dashboard type='line' />
+                <Dashboard type='bar' />
 
-             
-                <Dashboard type='donut'/>
-                <Dashboard type='line'/>
-                <Dashboard type='bar'/>
-
-            </div>
+            </div> */}
 
 
 

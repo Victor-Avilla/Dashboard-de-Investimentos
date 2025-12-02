@@ -15,18 +15,11 @@ export default function LineGraph() {
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         legend: {
             position: 'top',
         },
-        pointBackgroundColor: '#c45b1a',
-        plugins: {
-            legend: {
-                labels: {
-                    color: '#64748b'
-                }
-
-            }
-        },
+        pointBackgroundColor: '#0f6070',
         layout: {
             padding: 10,
         }
@@ -40,8 +33,8 @@ export default function LineGraph() {
         ],
         datasets: [{
             label: 'Patrimonio Total',
-            data: [0, 200, 5000, 3000, 8000, 7600, 4000, 10000, 40000, 65500, 80000, 100000],
-            borderColor: '#776015',
+            data: [0, 200, 5000, 10000, 3000, 8000, 7600, 4000, 30000, 15500, 60000, 80000],
+            borderColor: '#026756',
         }]
     }
 
