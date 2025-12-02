@@ -1,5 +1,6 @@
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
+import { color } from "chart.js/helpers";
 
 ChartJS.register(
     CategoryScale,
@@ -11,9 +12,10 @@ ChartJS.register(
 
 export default function BarGraph() {
 
-    const labels=["VALE3", "Bitcoin", "BBAS4", "MGLU4", "PETR4", "GOOGL", "AMZN"]
+    const labels = ["VALE3", "Bitcoin", "BBAS4", "MGLU4", "PETR4", "GOOGL", "AMZN"]
 
-   const options = {
+    const options = {
+        maintainAspectRatio: false,
         responsive: true,
         plugins: {
             legend: {
@@ -21,16 +23,17 @@ export default function BarGraph() {
             },
             title: {
                 display: true,
-                text: 'Desempenho do Ativo',
             },
         },
     };
 
     const data = {
+        
         labels: labels,
         datasets: [{
-            label: 'Desenpenho do Ativo',
+            label: 'Desempenho de hoje',
             data: [65, 59, 80, 81, 56, 55, 40],
+            barThickness: 30,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(255, 159, 64, 0.2)',
@@ -54,4 +57,5 @@ export default function BarGraph() {
     };
 
     return <Bar options={options} data={data} />
+
 }
